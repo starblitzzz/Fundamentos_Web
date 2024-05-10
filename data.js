@@ -1,3 +1,4 @@
+//productos DB
 const productos = [
   {
     codigo: "AbCde123",
