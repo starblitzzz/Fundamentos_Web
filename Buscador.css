@@ -1,0 +1,208 @@
+* {
+  font-family: "Malgun Gothic";
+  color: white;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0%;
+  min-height: 100%;
+  display: grid;
+  grid-template:
+    "header" 205px
+    "section" 75px
+    "main" 80%
+    / 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  grid-area: "header";
+  justify-content: flex-end;
+  gap: 10px;
+  background-image: url("./images/imagenheader.png");
+  text-align: center;
+}
+
+#seccion0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin: 0%;
+  padding: 5px;
+  padding-left: 10px;
+  height: 25%;
+  width: 100%;
+  background-color: #107acc;
+}
+
+#t1 {
+  color: #0cbccc;
+}
+
+#seccion0 img {
+  width: 50px;
+  height: 50px;
+}
+#seccion1 {
+  display: flex;
+  margin: 0%;
+  padding: 1px;
+  padding-left: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  grid-area: "section";
+  background-color: #142157;
+}
+
+#seccion1 button {
+  width: 50px;
+  height: 50px;
+  background-image: url("./images/flecha.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #142157;
+  border-radius: 25px;
+  border: 1px solid white;
+}
+
+#seccion1 input {
+  border-radius: 20px;
+  height: 60%;
+  width: 30%;
+  color: #142157;
+  padding-left: 5px;
+}
+
+#lupa {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 37%; /* Ajusta la posición del ícono */
+  top: 32.5%; /* Centra verticalmente el ícono */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: "main";
+}
+
+#contenedor {
+  width: 65%;
+  height: 150px;
+  margin: 5px;
+  padding: 1px;
+}
+#contenedor h1 {
+  color: #142157;
+}
+
+#seccion2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #107acc;
+  border-radius: 10px;
+  width: 98%;
+  height: 40%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.campos {
+  border-radius: 20px;
+  height: 40%;
+  width: 30%;
+  color: #142157;
+  padding-left: 5px;
+}
+
+option {
+  color: #142157;
+}
+
+section button {
+  background-color: #142157;
+}
+
+#clean {
+  background-color: gray;
+}
+#seccion3 {
+  margin: 15px;
+  padding: 2px;
+  width: 80%;
+  height: auto;
+}
+
+#seccion3 div {
+  width: 98%;
+  height: auto;
+  margin: 5px;
+  padding: auto;
+  border-bottom: 2px solid #142157;
+}
+
+#seccion3 h1 {
+  color: #142157;
+  font-size: 30px;
+}
+
+#table {
+  margin: 1px;
+  padding: 2px;
+}
+
+table {
+  width: 100%;
+  height: 80%;
+}
+
+tr,
+td,
+th {
+  background-color: #142157;
+  height: 20px;
+}
+
+#pag {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+  margin-top: 20px;
+  padding: 1px;
+  width: auto;
+  height: auto;
+}
+
+#pag p {
+  color: #142157;
+}
+
+.paginacion {
+  width: 50px;
+  background-image: url("./images/flechacorrecta.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+#ant {
+  background-image: url("./images/flechaant.png");
+  background-size: cover;
+  background-position: center;
+}
