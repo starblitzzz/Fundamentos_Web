@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
+    <title>MotorMasters</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -29,14 +29,58 @@
           <img src="./images/formulario.png" alt="">
           <h1>Registro de productos</h1>
         </header>
-      <label for="">nombre</label>
+      <div class="cajas" id="caja1">
+        <label for="nombre">Nombre</label>
+        <input  name="nombre"type="text">
+        <label for="categoria">Categoria</label>
+        <select name="categoria" >
+          <option value="" disabled selected>Selecciona una categoria</option>
+          <option >Motorizacion</option>
+          <option >Sistema de frenos</option>
+          <option >Sistema de suspension</option>
+          <option >Accesorios y herramientas</option>
+          <option >Ruedas y neumaticos</option>
+          <option >Electronica y multimedia</option>
+          <option >Sistema Electrico</option>
+          <option >Iluminacion</option>
+          <option >Sistema de visibilidad</option>
+          <option >Transmision y embrague</option>
+          <option >Sistema de escape</option>
+        </select>
+        <label for="precio">Precio</label>
+        <input name="precio" type="text">
+        <label for="codigo">Codigo</label>
+        <input name="codigo" type="text">
+        <label for="garantia">Garantia</label>
+        <input  name="garantia" type="text">
+        
+
+      </div>
+      <div class="cajas" id="caja2">
+       <label  for="">Imagen</label>
+       <figure></figure>
+       <select name="imagen" id="">
+        <option value="" disabled selected>Selecciona una imagen</option>
+       </select>
+       <label for="stock">Disponibilidad en stock</label>
+       <input name="stock"type="text">
+       <label for="material">Material</label>
+       <input name="material" type="text">
+      </div>
+      <div class="cajas" id="caja3">
+       <button class="botones" id="limpiar">Limpiar</button>
+       <button class="botones" id="registrar">Registrar</button>
+      </div>
       </form>
 
     </main>
     <footer>
-
+      <div>
+      <img src="./images/carro-deportivo.png" alt="icono carro">
+      <p>Santiago Rodriguez Suarez</p>
+      <a href="./listado.html"> listado </a>
+      </div>
     </footer>
-    <div></div>
     <script src="data.js" type="text/javascript"></script>
   </body>
 </html>

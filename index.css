@@ -4,15 +4,17 @@
 
 html {
   height: 100%;
+  padding: 0%;
 }
 
 body {
+  margin: 0%;
   min-height: 100%;
   display: grid;
   grid-template:
     "header" 8%
-    "main" 84%
-    "footer" 8%
+    "main" 86%
+    "footer" 6%
     / 100%;
 
   border: gray 1px solid;
@@ -44,20 +46,26 @@ header div {
   height: 90%;
   flex-direction: row;
 }
+
 div div {
   height: 80%;
   width: 90%;
   padding: 1px;
+  padding-top: 5px;
   margin: 1px;
   align-items: center;
 }
 
 div figure {
+  border: white 2px solid;
+  border-radius: 10px;
   margin: 0%;
   padding: 0%;
+  padding-left: 3px;
+  padding-bottom: 3px;
   padding-top: 3px;
   height: 90%;
-  width: 10%;
+  width: 5%;
 }
 
 header img {
@@ -73,7 +81,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   grid-area: main;
-  border: purple 2px solid;
+  margin: 0%;
+  padding: 0%;
 }
 
 section {
@@ -87,28 +96,149 @@ section {
   width: 70%;
   background-color: white;
   color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 form {
+  border-radius: 20px;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "div1 div2"
+    "div3 div3";
+  grid-template-rows: 15% 75% 10%;
+  grid-template-columns: 50% 50%;
   border-radius: 10px;
-  padding: 2px;
+  padding: 0px;
   margin: 2px;
-  width: 50%;
+  width: 40%;
   height: 80%;
-  border: #0cbccc 2px solid;
+  border: 1px solid gray;
   background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 form header {
+  padding: 2px;
+  margin: 1px;
+  margin-bottom: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  grid-area: "header";
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  border-bottom: 2px solid #15297c;
 }
 form h1 {
   color: #15297c;
 }
+.cajas {
+  margin: 1px;
+  padding: 2px;
+}
+
+#caja1 {
+  padding-left: 20px;
+  grid-area: "div1";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+select {
+  width: 70%;
+  color: #15297c;
+  align-self: flex-start;
+}
+input {
+  border-radius: 8px;
+  color: #15297c;
+  align-self: flex-start;
+  width: 70%;
+}
+
+label {
+  font-size: 15px;
+  color: #15297c;
+}
+
+#caja2 {
+  padding-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: "div2";
+}
+
+#caja2 select {
+  width: 99%;
+}
+
+#caja2 figure {
+  padding: 2px;
+  margin: 2px;
+  border: 2px solid #107acc;
+  width: 95%;
+}
+
+#caja3 {
+  padding-right: 10px;
+  grid-area: "div3";
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  grid-column: span 2;
+}
+
+.botones {
+  border-radius: 5px;
+  width: 20%;
+  height: 80%;
+}
+
+#limpiar {
+  background-color: gray;
+  color: white;
+  border-style: none;
+}
+
+#registrar {
+  background-color: #0cbccc;
+  color: white;
+  border-style: none;
+}
+
 footer {
+  margin: 0px;
+  padding: 1px;
   grid-area: footer;
-  border: red 2px solid;
   background-color: #107acc;
+  justify-content: end;
+}
+
+footer div {
+  display: flex;
+  gap: 5px;
+  margin: 0%;
+  padding: 0%;
+  height: 70%;
+  width: 93%;
+  float: right;
+  align-items: flex-start;
+  flex-direction: row;
+  font-size: 10px;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+footer div img {
+  height: auto;
+  width: auto;
+  float: left;
+  align-self: center;
 }
