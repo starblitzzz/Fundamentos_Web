@@ -1,3 +1,6 @@
+// import { productos } from "./data.js";
+// import { images } from "./data.js";
+
 //productos DB
 const images = {
   img1: "./images/motorización.png",
@@ -517,3 +520,153 @@ const productos = [
 ];
 
 console.log(productos.length);
+
+const campos = document.getElementsByClassName("campos");
+const clear = document.getElementById("limpiar");
+const imagen = document.getElementById("preview");
+const selector = document.getElementById("selector");
+const name = document.getElementById("nombre");
+const categoria = document.getElementById("categoria");
+const codigo = document.getElementById("codigo");
+const garantia = document.getElementById("garantia");
+const cantidad = document.getElementById("cantidad");
+const material = document.getElementById("material");
+const registrar = document.getElementById("registrar");
+const precio = document.getElementById("precio");
+
+//codigo de la vista de registro
+function registrarproducto() {
+  const product = {
+    codigo: codigo.value,
+    nombre: name.value,
+    categoria: categoria.value,
+    imagen: imagen(),
+    stock: cantidad.value,
+    material: material.value,
+    garantia: garantia.value,
+    precio: precio.value,
+  };
+
+  productos.push(product);
+  console.log(productos);
+}
+
+function nombre() {
+  if (name.value.length > 20 || name.value.length < 3) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function imagen() {
+  const opc = selector.value;
+  if (opc == "Motor") {
+    return images[0];
+  }
+  if (opc == "Electrico") {
+    return images[1];
+  }
+  if (opc == "Ruedas") {
+    return images[2];
+  }
+  if (opc == "Escape") {
+    return images[3];
+  }
+  if (opc == "Frenos") {
+    return images[4];
+  }
+  if (opc == "Suspension") {
+    return images[5];
+  }
+  if (opc == "Herramientas") {
+    return images[6];
+  }
+  if (opc == "Multimedia") {
+    return images[7];
+  }
+  if (opc == "Iluminacion") {
+    return images[8];
+  }
+  if (opc == "Vision") {
+    return images[9];
+  }
+  if (opc == "Transmision") {
+    return images[10];
+  } else {
+    return false;
+  }
+}
+
+function cod() {
+  const code = codigo.value;
+  const numeros = codigo.match(/\d/g) || [];
+  const mayusculas = codigo.match(/[A-Z]/g) || [];
+  const minusculas = valor.match(/[a-z]/g) || [];
+
+  const cantidadnumeros = numeros.length;
+  const cantidadmayusculas = mayusculas.length;
+  const cantidadminusculas = minusculas.length;
+
+  if (
+    cantidadnumeros < 2 ||
+    cantidadmayusculas < 1 ||
+    cantidadminusculas < 1 ||
+    code.length < 8 ||
+    code.length > 10
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validarCampos() {
+  if (
+    nombre() === false ||
+    categoria.value.trim() === "" ||
+    precio.value.length < 4 ||
+    parseFloat(precio.value) < 1000 ||
+    cod() === false ||
+    garantia.value.trim() === "" ||
+    selector.value.trim() === "" ||
+    parseInt(cantidad.value) < 1 ||
+    cantidad.value.trim() === "" ||
+    material.value.trim() === ""
+  ) {
+    window.location.href = "./indicaciones.html";
+    alert("Registro invalido :(");
+  } else {
+    window.location.href = "./listado.html";
+    registrarproducto();
+  }
+}
+
+registrar.addEventListener("click", validarCampos);
+
+selector.addEventListener("change", () => {
+  const opc = selector.value;
+  if (opc == "Motor") {
+    preview.setAttribute("src", images[0]);
+  }
+  if (opc == "Electrico") {
+    preview.setAttribute("src", images[1]);
+  } else {
+    preview.setAttribute("src", "");
+  }
+});
+
+clear.addEventListener("click", () => {
+  clear.style.color = "white";
+  clear.style.backgroundColor = "blue";
+  for (let i = 0; i < campos.length; i++) {
+    campos[i].value = "";
+  }
+});
+
+registrar.addEventListener("mouseover", () => {
+  registrar.style.backgroundColor = "red";
+});
+//
+
+//codigo de la vista de indicaciones
