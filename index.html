@@ -24,7 +24,7 @@
       <section>
         en esta vista podras registrar los productos que vas a ofrecer en tu sitio web
       </section>
-      <form action="">
+      <form action="" method="post">
         <header>
           <img src="./images/formulario.png" alt="">
           <h1>Registro de productos</h1>
@@ -58,11 +58,11 @@
       </div>
       <div class="cajas" id="caja2">
        <label  for="">Imagen</label>
-       <figure ><img id="preview"src="" alt=""></figure>
-       <select name="imagen" >
-        <option  id="selector" value="" disabled selected>Selecciona una imagen</option>
-        <option value="1">Motor</option>
-        <option value="2">Electrico</option>
+       <img id="preview" src="" alt="preview" />
+       <select id="selector" name="imagen" >
+        <option  value="" disabled selected>Selecciona una imagen</option>
+        <option value="Motor">Motor</option>
+        <option value="Electrico">Electrico</option>
         <option value="3">Ruedas</option>
         <option value="4">Escape</option>
         <option value="5">Frenos</option>

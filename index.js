@@ -523,7 +523,7 @@ console.log(productos.length);
 
 const campos = document.getElementsByClassName("campos");
 const clear = document.getElementById("limpiar");
-const imagen = document.getElementById("preview");
+// const preview = document.getElementById("preview");
 const selector = document.getElementById("selector");
 const name = document.getElementById("nombre");
 const categoria = document.getElementById("categoria");
@@ -559,7 +559,7 @@ function nombre() {
   }
 }
 
-function imagen() {
+function imagenfun() {
   const opc = selector.value;
   if (opc == "Motor") {
     return images[0];
@@ -645,18 +645,31 @@ function validarCampos() {
 registrar.addEventListener("click", validarCampos);
 
 selector.addEventListener("change", () => {
+  const preview = document.getElementById("preview");
   const opc = selector.value;
+  console.log(opc);
   if (opc == "Motor") {
-    preview.setAttribute("src", images[0]);
+    console.log(images.img3);
+    preview.setAttribute("src", images.img3);
   }
   if (opc == "Electrico") {
-    preview.setAttribute("src", images[1]);
+    preview.setAttribute("src", images.img2);
+  }
+  if (opc == 3) {
+    preview.setAttribute("src", images.img3);
+  }
+  if (opc == 4) {
+    preview.setAttribute("src", images.img4);
+  }
+  if (opc == 5) {
+    preview.setAttribute("src", images.img5);
   } else {
     preview.setAttribute("src", "");
   }
 });
 
-clear.addEventListener("click", () => {
+clear.addEventListener("click", (event) => {
+  event.preventDefault();
   clear.style.color = "white";
   clear.style.backgroundColor = "blue";
   for (let i = 0; i < campos.length; i++) {
@@ -665,6 +678,7 @@ clear.addEventListener("click", () => {
 });
 
 registrar.addEventListener("mouseover", () => {
+  console.log("funcionando");
   registrar.style.backgroundColor = "red";
 });
 //
