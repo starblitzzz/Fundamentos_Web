@@ -519,8 +519,6 @@ const productos = [
   },
 ];
 
-console.log(productos.length);
-
 const campos = document.getElementsByClassName("campos");
 const clear = document.getElementById("limpiar");
 // const preview = document.getElementById("preview");
@@ -533,6 +531,7 @@ const cantidad = document.getElementById("cantidad");
 const material = document.getElementById("material");
 const registrar = document.getElementById("registrar");
 const precio = document.getElementById("precio");
+// const redireccion = document.getElementById("redirigir");
 
 //codigo de la vista de registro
 function registrarproducto() {
@@ -540,7 +539,7 @@ function registrarproducto() {
     codigo: codigo.value,
     nombre: name.value,
     categoria: categoria.value,
-    imagen: imagen(),
+    imagen: imagenfun(),
     stock: cantidad.value,
     material: material.value,
     garantia: garantia.value,
@@ -562,37 +561,37 @@ function nombre() {
 function imagenfun() {
   const opc = selector.value;
   if (opc == "Motor") {
-    return images[0];
+    return images.img1;
   }
   if (opc == "Electrico") {
-    return images[1];
+    return images.img2;
   }
   if (opc == "Ruedas") {
-    return images[2];
+    return images.img3;
   }
   if (opc == "Escape") {
-    return images[3];
+    return images.img4;
   }
   if (opc == "Frenos") {
-    return images[4];
+    return images.img5;
   }
   if (opc == "Suspension") {
-    return images[5];
+    return images.img6;
   }
   if (opc == "Herramientas") {
-    return images[6];
+    return images.img7;
   }
   if (opc == "Multimedia") {
-    return images[7];
+    return images.img8;
   }
   if (opc == "Iluminacion") {
-    return images[8];
+    return images.img9;
   }
   if (opc == "Vision") {
-    return images[9];
+    return images.img10;
   }
   if (opc == "Transmision") {
-    return images[10];
+    return images.img11;
   } else {
     return false;
   }
@@ -634,15 +633,20 @@ function validarCampos() {
     cantidad.value.trim() === "" ||
     material.value.trim() === ""
   ) {
+    console.log("fallo");
     window.location.href = "./indicaciones.html";
     alert("Registro invalido :(");
   } else {
+    console.log("gano");
     window.location.href = "./listado.html";
     registrarproducto();
   }
 }
 
-registrar.addEventListener("click", validarCampos);
+registrar.addEventListener("click", (event) => {
+  event.preventDefault();
+  validarCampos();
+});
 
 selector.addEventListener("change", () => {
   const preview = document.getElementById("preview");
@@ -668,19 +672,96 @@ selector.addEventListener("change", () => {
   }
 });
 
+name.addEventListener("mouseover", () => {
+  name.style.border = " 1px solid #107acc";
+});
+
+name.addEventListener("mouseout", () => {
+  name.style.border = " 1px solid blue";
+});
+
+categoria.addEventListener("mouseover", () => {
+  categoria.style.border = " 1px solid #107acc";
+});
+
+categoria.addEventListener("mouseout", () => {
+  categoria.style.border = " 1px solid blue";
+});
+
+codigo.addEventListener("mouseover", () => {
+  codigo.style.border = " 1px solid #107acc";
+});
+
+codigo.addEventListener("mouseout", () => {
+  codigo.style.border = " 1px solid blue";
+});
+
+garantia.addEventListener("mouseover", () => {
+  garantia.style.border = " 1px solid #107acc";
+});
+
+garantia.addEventListener("mouseout", () => {
+  garantia.style.border = " 1px solid blue";
+});
+
+cantidad.addEventListener("mouseover", () => {
+  cantidad.style.border = " 1px solid #107acc";
+});
+
+cantidad.addEventListener("mouseout", () => {
+  cantidad.style.border = " 1px solid blue";
+});
+
+material.addEventListener("mouseover", () => {
+  material.style.border = " 1px solid #107acc";
+});
+
+material.addEventListener("mouseout", () => {
+  material.style.border = " 1px solid blue";
+});
+
+precio.addEventListener("mouseover", () => {
+  precio.style.border = " 1px solid #107acc";
+});
+
+precio.addEventListener("mouseout", () => {
+  precio.style.border = " 1px solid blue";
+});
+
 clear.addEventListener("click", (event) => {
   event.preventDefault();
   clear.style.color = "white";
-  clear.style.backgroundColor = "blue";
+  clear.style.backgroundColor = "white";
   for (let i = 0; i < campos.length; i++) {
     campos[i].value = "";
   }
 });
 
-registrar.addEventListener("mouseover", () => {
-  console.log("funcionando");
-  registrar.style.backgroundColor = "red";
+clear.addEventListener("mouseover", () => {
+  clear.style.color = "gray";
+  clear.style.backgroundColor = "white";
 });
+
+clear.addEventListener("mouseout", () => {
+  clear.style.color = "white";
+  clear.style.backgroundColor = "gray";
+});
+
+registrar.addEventListener("mouseover", () => {
+  registrar.style.backgroundColor = "white";
+  registrar.style.color = "#0cbccc";
+});
+
+registrar.addEventListener("mouseout", () => {
+  registrar.style.backgroundColor = "#0cbccc";
+  registrar.style.color = "white";
+});
+
 //
 
 //codigo de la vista de indicaciones
+// redireccion.addEventListener("click", (event) => {
+//   console.log("ok");
+//   event.preventDefault();
+//   window.location.href = "./index.html";
+// });

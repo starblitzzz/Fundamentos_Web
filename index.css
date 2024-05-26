@@ -154,6 +154,7 @@ select {
 }
 input {
   border-radius: 8px;
+  border: 1px solid blue;
   color: #15297c;
   align-self: flex-start;
   width: 70%;
@@ -189,8 +190,7 @@ label {
   padding: 2px;
   height: 120px;
   width: 250px;
-  background-image: "./images/motorización.png";
-  border: 2px solid red;
+  border: 2px solid blue;
   background-size: cover;
   object-fit: contain;
 }
