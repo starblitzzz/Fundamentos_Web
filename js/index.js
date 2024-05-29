@@ -634,11 +634,11 @@ function validarCampos() {
     material.value.trim() === ""
   ) {
     console.log("fallo");
-    window.location.href = "./indicaciones.html";
+    window.location.href = "./html/indicaciones.html";
     alert("Registro invalido :(");
   } else {
     console.log("gano");
-    window.location.href = "./listado.html";
+    window.location.href = "./html/listado.html";
     registrarproducto();
   }
 }

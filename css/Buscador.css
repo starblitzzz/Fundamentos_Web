@@ -24,7 +24,7 @@ header {
   grid-area: "header";
   justify-content: flex-end;
   gap: 10px;
-  background-image: url("./images/imagenheader.png");
+  background-image: url("../images/imagenheader.png");
   text-align: center;
 }
 
@@ -51,6 +51,7 @@ header {
 }
 #seccion1 {
   display: flex;
+  justify-content: center;
   margin: 0%;
   padding: 1px;
   padding-left: 10px;
@@ -64,7 +65,7 @@ header {
 #seccion1 button {
   width: 50px;
   height: 50px;
-  background-image: url("./images/flecha.png");
+  background-image: url("../images/flecha.png");
   background-size: cover;
   background-position: center;
   background-color: #142157;
@@ -84,8 +85,8 @@ header {
   width: 27px;
   height: 27px;
   position: absolute;
-  left: 37%; /* Ajusta la posición del ícono */
-  top: 32.5%; /* Centra verticalmente el ícono */
+  left: 37%;
+  top: 32.5%;
 }
 
 main {
@@ -193,7 +194,7 @@ th {
 
 .paginacion {
   width: 50px;
-  background-image: url("./images/flechacorrecta.png");
+  background-image: url("../images/flechacorrecta.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -202,7 +203,7 @@ th {
 }
 
 #ant {
-  background-image: url("./images/flechaant.png");
+  background-image: url("../images/flechaant.png");
   background-size: cover;
   background-position: center;
 }

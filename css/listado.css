@@ -24,7 +24,7 @@ header {
   margin: 0px;
   padding: 2px;
   padding-top: 15px;
-  background-image: url("./images/imagenheader.png");
+  background-image: url("../images/imagenheader.png");
   text-align: center;
 }
 
@@ -67,7 +67,6 @@ a {
   width: 10%;
   background-color: #107acc;
   border-style: none;
-  border: 1px solid #0cbccc;
   font-size: 15px;
   text-align: center;
   text-decoration: none;
@@ -152,7 +151,7 @@ article div {
 
 div button {
   width: 50px;
-  background-image: url("./images/flechacorrecta.png");
+  background-image: url("../images/flechacorrecta.png");
   background-size: cover;
   background-position: center;
   border: none;
@@ -161,7 +160,7 @@ div button {
 }
 
 #ant {
-  background-image: url("./images/flechaant.png");
+  background-image: url("../images/flechaant.png");
   background-size: cover;
   background-position: center;
 }
