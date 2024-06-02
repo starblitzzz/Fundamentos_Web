@@ -3,7 +3,7 @@
 
 //productos DB
 const images = {
-  img1: "./images/motorización.png",
+  img1: "https://motorkote.com.co/wp-content/uploads/2022/09/Motor-Diesel-1-768x514.png",
   img2: "./images/sistemaelectrico.jpg",
   img3: "./images/rueda.jpg",
   img4: "./images/escape.jpg",
@@ -653,8 +653,7 @@ selector.addEventListener("change", () => {
   const opc = selector.value;
   console.log(opc);
   if (opc == "Motor") {
-    console.log(images.img3);
-    preview.setAttribute("src", images.img3);
+    preview.setAttribute("src", images.img1);
   }
   if (opc == "Electrico") {
     preview.setAttribute("src", images.img2);
@@ -667,6 +666,24 @@ selector.addEventListener("change", () => {
   }
   if (opc == 5) {
     preview.setAttribute("src", images.img5);
+  }
+  if (opc == 6) {
+    preview.setAttribute("src", images.img6);
+  }
+  if (opc == 7) {
+    preview.setAttribute("src", images.img7);
+  }
+  if (opc == 8) {
+    preview.setAttribute("src", images.img8);
+  }
+  if (opc == 9) {
+    preview.setAttribute("src", images.img9);
+  }
+  if (opc == 10) {
+    preview.setAttribute("src", images.img10);
+  }
+  if (opc == 11) {
+    preview.setAttribute("src", images.img11);
   } else {
     preview.setAttribute("src", "");
   }

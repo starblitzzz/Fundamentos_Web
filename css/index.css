@@ -191,8 +191,6 @@ label {
   height: 120px;
   width: 250px;
   border: 2px solid blue;
-  background-size: cover;
-  object-fit: contain;
 }
 
 #caja3 {

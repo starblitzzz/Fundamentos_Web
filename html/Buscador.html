@@ -18,7 +18,7 @@
     <section class="secciones" id="seccion1">
         <button id="reg"></button>
         <p>Regresar</p>
-        <input  id="Buscar" placeholder="Buscar" type="search">
+        <input  id="buscar" placeholder="Buscar" type="search">
         <img id="lupa" src="../images/lupa.png" alt="">
 
     </section>
@@ -27,9 +27,9 @@
             <h1>Filtros</h1>
         <section id="seccion2">
             <label for="nombre" placeholder="Ingrese un nombre">Nombre</label>
-            <input class= "campos" name="nombre" type="text">
+            <input class= "campos" id="name" name="nombre" type="text">
             <label for="categoria">Categoria</label>
-            <select class= "campos" name="categoria" id="">
+            <select class= "campos" id="cat" name="categoria" id="">
                 <option value="" disabled selected>Selecciona una categoria</option>
           <option >Motorizacion</option>
           <option >Sistema de frenos</option>
@@ -43,9 +43,9 @@
           <option >Transmision y embrague</option>
           <option >Sistema de escape</option>
             </select>
-            <label for="material" placeholder="Ingrese un material">Material</label>
+            <label for="material" id="mat" placeholder="Ingrese un material">Material</label>
             <input class= "campos"  name="material" type="text">
-            <button>Aplicar</button>
+            <button id="filter">Buscar</button>
             <button id="clean">Limpiar</button>
         </div>
         <section>
@@ -61,33 +61,21 @@
                       <th class="titulos">Nombre</th>
                       <th class="titulos">Categoria</th>
                       <th class="titulos">Precio</th>
-                      <th class="titulos">Imagen</th>
                       <th class="titulos">Stock</th>
                       <th class="titulos">Material</th>
                       <th class="titulos">Garantia</th>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td class="codigo"></td>
+                      <td class="nombre"></td>
+                      <td class="categoria"></td>
+                      <td class="precio"></td>
+                      <td class="stock"></td>
+                      <td class="material"></td>
+                      <td class="garantia"></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
+                        <td class="codigo" ></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -97,17 +85,7 @@
                         <td></td>
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -117,17 +95,7 @@
                         <td></td>
                       </tr>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -137,7 +105,7 @@
                         <td></td>
                       </tr>
                       <tr>
-                        <td></td>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -147,7 +115,37 @@
                         <td></td>
                       </tr>
                       <tr>
+                        <td class="codigo"></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="codigo"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="codigo"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -158,7 +156,7 @@
 
                       </tr>
                       <tr>
-                        <td></td>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -168,7 +166,7 @@
                         <td></td>
                       </tr>
                       <tr>
-                        <td></td>
+                        <td class="codigo"></td>
                         <td></td>
                         <td></td>
                         <td></td>
