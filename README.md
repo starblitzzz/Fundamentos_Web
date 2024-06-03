@@ -27,15 +27,13 @@ Contenido del proyecto:
 * ■ Campo para el precio.
 * ■ 3 Atributos adicionales de libre elección.
 * ○ Botón de registro.
-* ○ Botón de limpiar campos.
-<br>
+* ○ Botón de limpiar campos
 * ● Pantalla de indicaciones.
 * ○ Título de la página.
 * ○ Descripción de la empresa.
 * ○ Indicaciones de como crear un producto.
 * ○ Ejemplo de opciones disponibles.
 * ○ Botón de redirección a Registro de productos.
-<br>
 * ● Vista de productos.
 * ○ Titulo de la página.
 * ○ Sección de productos, se deben visualizar todas sus propiedades.
@@ -44,7 +42,6 @@ Contenido del proyecto:
 * ○ Barra de navegación
 * ■ Botón para búsqueda de productos.
 * ■ Botón para redirección a registro de productos.
-<br>
 * ● Buscador de productos.
 * ○ Título de la página.
 * ○ Sección de filtros en el centro y zona superior. .
