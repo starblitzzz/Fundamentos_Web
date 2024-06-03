@@ -535,53 +535,39 @@ const mat = document.getElementById("mat");
 const cleaner = document.getElementById("clean");
 const filter = document.getElementById("filter");
 
-// for (i = 0; i <= codigos.length; i++) {
-//   console.log(codigos.length);
-//   codigos[i].innerHTML = productos[i].codigo;
-//   codigos[i].innerHTML = productos[i].codigo;
-// }
-
 function buscar() {
-  if (!buscador.value && !name.value && !cat.value && !mat.value) {
-    alert("Debes ingresar el atributo que deseas buscar");
-    return;
-  }
-
-  let index = 0;
-  const valor = buscador.value;
-  let encontrado = false;
-
-  for (let i = 0; i < productos.length; i++) {
-    if (
-      valor == productos[i].codigo ||
-      valor == productos[i].nombre ||
-      valor == productos[i].categoria ||
-      valor == productos[i].precio ||
-      valor == productos[i].stock ||
-      valor == productos[i].material ||
-      valor == productos[i].garantia ||
-      name.value == productos[i].nombre ||
-      cat.value == productos[i].categoria ||
-      mat.value == productos[i].material
-    ) {
-      codigos[index].innerHTML = productos[i].codigo;
-      nombres[index].innerHTML = productos[i].nombre;
-      categorias[index].innerHTML = productos[i].categoria;
-      stock[index].innerHTML = productos[i].stock;
-      materiales[index].innerHTML = productos[i].material;
-      garantias[index].innerHTML = productos[i].garantia;
-      index++;
-      encontrado = true;
+  let inde = 0;
+  if (name.value == "" && cat.value == "" && mat.value == "") {
+    for (let i = 0; i < productos.length; i++) {
+      codigos[inde].innerHTML = productos[i].codigo;
+      nombres[inde].innerHTML = productos[i].nombre;
+      categorias[inde].innerHTML = productos[i].categoria;
+      precios[inde].innerHTML = "$" + productos[i].precio;
+      stock[inde].innerHTML = productos[i].stock;
+      materiales[inde].innerHTML = productos[i].material;
+      garantias[inde].innerHTML = productos[i].garantia;
+      inde++;
     }
-  }
-
-  if (!encontrado) {
-    alert("No hay resultados que concuerden con tu búsqueda");
+  } else {
+    let index = 0;
+    for (let i = 0; i < productos.length; i++) {
+      if (
+        name.value === productos[i].nombre ||
+        cat.value === productos[i].categoria ||
+        mat.value === productos[i].material
+      ) {
+        codigos[index].innerHTML = productos[i].codigo;
+        nombres[index].innerHTML = productos[i].nombre;
+        categorias[index].innerHTML = productos[i].categoria;
+        stock[index].innerHTML = productos[i].stock;
+        materiales[index].innerHTML = productos[i].material;
+        garantias[index].innerHTML = productos[i].garantia;
+        index++;
+      }
+    }
   }
 }
 function limpiar() {
-  buscador.value = "";
-
   for (let i = 0; i < filtros.length; i++) {
     filtros[i].value = "";
   }

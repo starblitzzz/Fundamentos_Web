@@ -592,10 +592,6 @@ function paginacion4() {
   }
 }
 uno.style.color = "#107acc";
-//deshabilitar boton cuando el usuario esta en la pagina 1
-// if ((uno.style.color = "#107acc")) {
-
-// }
 
 //EVENTOS
 b1.addEventListener("mouseover", () => {

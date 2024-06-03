@@ -599,9 +599,9 @@ function imagenfun() {
 
 function cod() {
   const code = codigo.value;
-  const numeros = codigo.match(/\d/g) || [];
-  const mayusculas = codigo.match(/[A-Z]/g) || [];
-  const minusculas = valor.match(/[a-z]/g) || [];
+  const numeros = code.match(/\d/g) || [];
+  const mayusculas = code.match(/[A-Z]/g) || [];
+  const minusculas = code.match(/[a-z]/g) || [];
 
   const cantidadnumeros = numeros.length;
   const cantidadmayusculas = mayusculas.length;
@@ -639,7 +639,6 @@ function validarCampos() {
   } else {
     console.log("gano");
     window.location.href = "./html/listado.html";
-    registrarproducto();
   }
 }
 
